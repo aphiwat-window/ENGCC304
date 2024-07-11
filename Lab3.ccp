@@ -27,15 +27,15 @@ int main() {
             TotalPrice[i] = Quantity[i] * UnitPrice[i] ;
             TotalAmount += TotalPrice[i] ;
         }//end for loop
+    printf( "--------------------------------------------------------------\n" ) ;
+    printf( "%-20s %11s %13s %17s\n",  "Name", "Quantity", "Unit Price", "Total Price" ) ;
+    printf( "--------------------------------------------------------------\n" ) ;
+    for( i = 0 ; i < NumberOfItems ; i++ ) {
+        printf( "%-20s %11d %13.2f %17.2f\n" , Name[i] , Quantity[i] , UnitPrice[i] , TotalPrice[i] ) ;
         printf( "--------------------------------------------------------------\n" ) ;
-        printf( "%-20s %11s %13s %17s\n",  "Name", "Quantity", "Unit Price", "Total Price" ) ;
-        printf( "--------------------------------------------------------------\n" ) ;
-        for( i = 0 ; i < NumberOfItems ; i++ ) {
-            printf( "%-20s %11d %13.2f %17.2f\n" , Name[i] , Quantity[i] , UnitPrice[i] , TotalPrice[i] ) ;
-            printf( "--------------------------------------------------------------\n" ) ;
-            printf( "%52s %11.2f\n", "TOTAL AMOUNT : " , TotalAmount ) ;
-            printf( "Enter customer name [QUIT to stop] : " ) ;
-            scanf( "%s",CustomerName ) ;
-        }//end for lopp
-        return 0 ;
-    }//end function 
+        printf( "%52s %11.2f\n", "TOTAL AMOUNT : " , TotalAmount ) ;
+        printf( "Enter customer name [QUIT to stop] : " ) ;
+        scanf( "%s",CustomerName ) ;
+    }//end for lopp
+    return 0 ;
+}//end function 
