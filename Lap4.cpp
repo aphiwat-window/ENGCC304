@@ -41,9 +41,9 @@ int main() {
     scanf( "%f" , &working_hrs ) ;
 
     printf( "Salary amount/hr: " ) ;
-    scanf( "%f" , &Salary) ;
+    scanf( "%f" , &Salary ) ;
 
-    Total = Salary * working_hrs ;
+    Total = Salary * working_hrs * 21 ;
     printf( "--------------------------------------------------------------\n" ) ;
     printf( "Employees ID = %s\n" , Employees ) ;
     printf( "Salary = U$ %.2f\n" , Total ) ;
