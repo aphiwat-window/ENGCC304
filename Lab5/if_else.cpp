@@ -41,9 +41,7 @@ int main() {
     printf( "กรอกคะแนนของท่าน: " ) ;
     if ( scanf( "%d" , &data ) != 1 ) {
         printf( "please enter number only" ) ;
-        // printf( "\nData = %d\n", data ) ;
     } else {
-        // printf( "\nData = %d\n", data ) ;
 
         if ( data >= 80 ) {
             printf( "A" ) ;
