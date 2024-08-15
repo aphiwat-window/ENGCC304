@@ -7,15 +7,18 @@ int main() {
         scanf("%d",&number);
 
         if ( number % 2 == 0 ) {
+
             int sum = 1 ;
             int b = 1 ;
             for ( int i = 0 ; i < 6 ; i++ ) {
-                if ( i < 6 ) {
+                if ( i < 5 ) {
                     b *= 10 ;
-                    printf( "%06d\n",sum) ;
+                    printf( "%d\n",sum += 100000 ) ;
                     sum = b ;
-                }
-            }
+                }else {
+                    printf( "%d\n" , sum ) ;
+                } //end if
+            } //end for 
             
         }else if ( number % 2 == 1 ) {
                 int sum = 1 ;
@@ -24,9 +27,9 @@ int main() {
                         sum = b ;
                         printf( "%06d\n",sum ) ;
                         b /= 10 ;
-                }   
-            }
-    }
+                } //end for   
+        } //else
+    } //end for
 
     return 0;
-}
+} //end funtion
