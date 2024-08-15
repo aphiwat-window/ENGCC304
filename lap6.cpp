@@ -7,16 +7,13 @@ int main() {
         scanf("%d",&number);
 
         if ( number % 2 == 0 ) {
-
             int sum = 1 ;
             int b = 1 ;
             for ( int i = 0 ; i < 6 ; i++ ) {
-                if ( i < 5 ) {
+                if ( i < 6 ) {
                     b *= 10 ;
-                    printf( "%d\n",sum += 100000 ) ;
+                    printf( "%06d\n",sum) ;
                     sum = b ;
-                }else {
-                    printf( "%d\n" , sum ) ;
                 }
             }
             
