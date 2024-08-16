@@ -1,35 +1,24 @@
 #include <stdio.h>
-
 int main() {
-    for ( int s = 0; s < 10; s==0) {
-        int number = 0 ;
-        printf( "กรอกจำนวนเลข : " ) ;
-        scanf("%d",&number);
-
-        if ( number % 2 == 0 ) {
-
-            int sum = 1 ;
-            int b = 1 ;
-            for ( int i = 0 ; i < 6 ; i++ ) {
-                if ( i < 5 ) {
-                    b *= 10 ;
-                    printf( "%d\n",sum += 100000 ) ;
-                    sum = b ;
-                }else {
-                    printf( "%d\n" , sum ) ;
-                } //end if
-            } //end for 
-            
-        }else if ( number % 2 == 1 ) {
-                int sum = 1 ;
-                int b = 100000;
-                for (int i = 0 ; i < 6 ; i++) {
-                        sum = b ;
-                        printf( "%06d\n",sum ) ;
-                        b /= 10 ;
-                } //end for   
-        } //else
-    } //end for
-
+        if ( int number = 0 ; printf( "กรอกจำนวนเลข : " ) , scanf( "%d" , &number ) , number % 2 == 0 ) {
+        for ( int i = 1 ; i <= number ; i++ ) {
+            for ( int k = 1 ; k <= number ; k++ ) {
+                if (k == number - i + 1) {
+                    printf( "1" ) ; } 
+                else {
+                    printf( "0" ) ; }//end if
+                }//end for
+            printf( "\n" ) ; }//end for
+        } else {
+            for ( int i = 1; i <= number; i++ ) {
+                for ( int k = 1 ; k <= number ; k++ ) {
+                    if ( k == i ) {
+                        printf( "1" ) ;} 
+                    else {
+                        printf( "0" ) ;}
+                    }
+                printf( "\n" ) ;    
+            } //else
+        } //end for
     return 0;
 } //end funtion
