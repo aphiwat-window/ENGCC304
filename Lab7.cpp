@@ -55,7 +55,7 @@
 
 int main() {
     srand( time(NULL) ) ;
-    int num = 0 , re = 1 , score = 100 ;
+    int num = 0  , score = 100 ;
     int front = 0 , back = 100 ;
 
     printf ( "คุณพี่อยากจะเล่นไหมคะ (1=play,-1=exit) :  " ) ;
@@ -92,7 +92,7 @@ int main() {
         }//end while 
         printf( "เล่นไหมใหม่คะ? (1=play,-1=exit) : " ) ;
         scanf( "%d" , &num ) ; 
-        }else if ( num == -1 ) { //ใช้กำหนดว่าจะไม่เล่น
+        } else { //ใช้กำหนดว่าจะไม่เล่น
             exit (0) ;
         }//end if
     }//end while เริ่มใหม่
