@@ -28,7 +28,7 @@ int main() {
     printf("Enter Maximum of array: ") ;
     scanf( "%d" , &ArMax ) ;
 
-    int Array[ArMax] ;
+    int Array[ ArMax ] ;
 
     for ( int i = 0 ; i < ArMax ; i++ ) {
         printf( "Enter Data [%d] " , i ) ;
