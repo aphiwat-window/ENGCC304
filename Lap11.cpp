@@ -26,41 +26,59 @@
 
 #include <stdio.h>
 
+int readData() {
+    int data;
+    printf( "กรอกค่ามา: " ) ;
+    scanf( "%d" , &data ) ;
+    return data ;
+}//end funtion readData
 
-int main() {
-    int data = 0 , count = 0 , cal2 = 1 , cal1 = 0 ;
-    int total = 0 , next = 0 , Sum[100] ;
-
-    printf( "กรอกค่ามา" ) ;
-    scanf( "%d", &data ) ;
-    
-    int digit = data ;
-    while (digit != 0) {
-        digit /= 10 ;
+int countDigits( int data ) {
+    int count = 0 ;
+    while ( data != 0 ) {
+        data /= 10 ;
         count++ ;
     }
+    return count;
+}//end funtion countDigits
 
-    digit = data ;
-    for (int j = 0; j < count; j++) {
-        cal1 = digit % 10 ;
-        cal2 = 1 ;
-        for (int i = 0 ; i < count; i++) {
-            cal2 =  cal2 * cal1 ;
-        }
+int calculate( int data , int count , int Sum[] ) {
+    int digit = data ;
+    int total = 0 ;
+    int next = 0 ;
+
+    for ( int j = 0 ; j < count ; j++ ) {
+        int cal1 = digit % 10 ;
+        int cal2 = 1 ;
+
+        for ( int i = 0 ; i < count ; i++ ) {
+            cal2 *= cal1 ;
+        }//end for ยกกำลัง
+
         Sum[next] = cal2 ;
+        total += cal2 ;
         next++ ;
         digit /= 10 ;
-    }
-    for ( int i = 0 ; i < next ; i++ ) {
+    }//end for คำนวน
+    return total ;
+}//end funtion calculateSum
+
+int main() {
+    int data = readData() ;
+    int count = countDigits(data) ;
+    int Sum[100] = {0} ;
+    int total = calculate( data , count , Sum ) ;
+
+    // แสดงผลลัพธ์ภายใน main
+    for ( int i = 0 ; i < count ; i++ ) {
         printf( "หลักที่ %d คือ %d\n" , i + 1 , Sum[i] ) ;
-        total += Sum[i] ;
-    }
+    }//end for แสดงหลัก และ เลข
+
     printf( "ผลรวมคือ %d\n" , total ) ;
-    if  (total == data ) {
-        printf( "Pass." ) ;
+    if ( total == data ) {
+        printf( "Pass.\n" ) ;
     } else {
-        printf( "Not Pass." ) ;
-    }
-    
+        printf( "Not Pass.\n" ) ;
+    }//end if เปรียบเทียบค่า
     return 0 ;
-}//end main function
+}//end funtion main
