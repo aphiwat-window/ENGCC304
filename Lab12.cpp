@@ -165,8 +165,7 @@ void Grade() {
         Average += STD[ i ].ScoreSub[ j ] ;
     }//end for หาค่าเฉลี่ย
 
-    Average /= 5 ;
-    printf( "\nAverage Scores: %.1f\n\n\n" , Average ) ;
+    printf( "\nAverage Scores: %.1f\n\n\n" , Average / 5 ) ;
 
     }//end funtion Grade
 }
